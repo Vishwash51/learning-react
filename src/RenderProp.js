@@ -1,10 +1,14 @@
 import React, { Fragment } from 'react';
 
-class Count extends React.Component {
+export class RenderProp extends React.Component {
     render() {
-      const val = this.props.val;
       return (
-          <Fragment> {val.counter}</Fragment>
+        <div>
+          <h1>Example!</h1>
+          <Child render={ele => (
+            <Count val={ele} />
+          )}/>
+        </div>
       );
     }
   }
@@ -35,16 +39,11 @@ class Count extends React.Component {
       );
     }
   }
-  
- export class RenderProp extends React.Component {
+  class Count extends React.Component {
     render() {
+      const val = this.props.val;
       return (
-        <div>
-          <h1>Example!</h1>
-          <Child render={ele => (
-            <Count val={ele} />
-          )}/>
-        </div>
+          <Fragment> {val.counter}</Fragment>
       );
     }
   }
