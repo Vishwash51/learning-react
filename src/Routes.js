@@ -8,6 +8,7 @@ import Info from './PassPropsBetweenComponents';
 import { Form } from 'reactstrap';
 import RegistrationForm from './RegistrationForm';
 import Hoc from './HOC';
+import {RenderProp} from './RenderProp';
 //const App = React.lazy(() => import('./App'))
 
 export default class Routes extends React.Component {
@@ -21,6 +22,7 @@ export default class Routes extends React.Component {
                         <Route exact path="/passprops_ie" component={Info} />
                         <Route exact path="/registration" component={RegistrationForm} />
                         <Route exact path="/hoc" component={Hoc} />
+                        <Route exact path="/renderprop" component={RenderProp} />
                     </Switch>
                 </Router>
         )
