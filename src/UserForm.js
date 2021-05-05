@@ -1,8 +1,6 @@
 import React from 'react';
 import { Col, Form } from 'reactstrap';
 import DatePicker from 'react-datepicker';
-import { Button } from 'bootstrap';
-
 
 export default class UserForm extends React.PureComponent {
     constructor(props) {

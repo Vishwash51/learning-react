@@ -2,7 +2,6 @@ import React,{Suspense,Fragment} from 'react';
 import { Col,Row } from 'reactstrap';
 // import UserForm from './UserForm';
 import Background from './imgbin_night-sky-png.png';
-
 import ErrorBond from './ErrPage';
 const UserForm=React.lazy(()=>import('./UserForm'))
 
@@ -28,7 +27,10 @@ const sectionStyle = {
                     <Col sm={6} className="offset-md-3" >
                         <div className="card" >
                             <div className="card-header">
-                                Registration Form
+                               <span> Registration Form</span>
+                               <span style={{float:"right"}}>
+                                   <a href={'/'} className="btn" >Back</a>
+                               </span>
                     </div>
                             <div className="card-body" style={sectionStyle}>
                                 <Suspense fallback={<h1>Wait...</h1>}>
