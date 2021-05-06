@@ -7,7 +7,7 @@ export class RenderProp extends React.Component {
           <h1>Example!</h1>
           <Child render={ele => (
             <Count val={ele} />
-          )}/>
+          )} />
         </div>
       );
     }

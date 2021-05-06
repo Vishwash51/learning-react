@@ -35,7 +35,9 @@ const sectionStyle = {
                             <div className="card-body" style={sectionStyle}>
                                 <Suspense fallback={<h1>Wait...</h1>}>
                                     <ErrorBond>
+                                    <React.StrictMode>
                                     <UserForm heading={title} detail={registrationDetail} />
+                                    </React.StrictMode>
                                     </ErrorBond>                                    
                                 </Suspense>                                
                             </div>

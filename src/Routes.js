@@ -9,6 +9,7 @@ import { Form } from 'reactstrap';
 import RegistrationForm from './RegistrationForm';
 import Hoc from './HOC';
 import {RenderProp} from './RenderProp';
+import HookForm from './Hook/Form';
 //const App = React.lazy(() => import('./App'))
 
 export default class Routes extends React.Component {
@@ -23,6 +24,7 @@ export default class Routes extends React.Component {
                         <Route exact path="/registration" component={RegistrationForm} />
                         <Route exact path="/hoc" component={Hoc} />
                         <Route exact path="/renderprop" component={RenderProp} />
+                        <Route exact path="/Hook/Form" component={HookForm} />
                     </Switch>
                 </Router>
         )

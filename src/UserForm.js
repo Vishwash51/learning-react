@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import { Col, Form } from 'reactstrap';
 import DatePicker from 'react-datepicker';
@@ -17,7 +18,7 @@ export default class UserForm extends React.PureComponent {
             ErrEmail:'',
             ErrMobile:'',
             ErrGender:'',
-            ErrDOB:''
+            ErrDOB:null
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -25,7 +26,6 @@ export default class UserForm extends React.PureComponent {
         this.setState({
             [e.target.name]:e.target.value
         })
-        
     }
     handleDate(date){
         debugger
