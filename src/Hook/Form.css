@@ -1,0 +1,10 @@
+.dark-mode {
+    background: black;
+    color: #bbb;
+  }
+  .dark-mode h1 {
+    color: #bbb;
+  }
+  .box.dark-mode .checkbox:hover {
+    color: #bbb;
+  }

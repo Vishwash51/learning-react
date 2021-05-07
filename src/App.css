@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.box.dark-mode {
+  background: black;
+  color: #bbb;
+}
+.box.dark-mode h1 {
+  color: white;
+}
+.box.dark-mode .checkbox:hover {
+  color: white;
+}
+
