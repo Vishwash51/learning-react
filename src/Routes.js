@@ -10,6 +10,13 @@ import RegistrationForm from './RegistrationForm';
 import Hoc from './HOC';
 import {RenderProp} from './RenderProp';
 import HookForm from './Hook/Form';
+//
+import ReduxPage from './ReduxPage'
+//
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+import rootReducer from './Services/Reducer/RootReducer';
+const store=createStore(rootReducer)
 //const App = React.lazy(() => import('./App'))
 
 export default class Routes extends React.Component {
@@ -25,6 +32,13 @@ export default class Routes extends React.Component {
                         <Route exact path="/hoc" component={Hoc} />
                         <Route exact path="/renderprop" component={RenderProp} />
                         <Route exact path="/Hook/Form" component={HookForm} />
+                        <Route exact path="/redux">
+                        <Provider store={store}>
+                            <ReduxPage />
+                            </Provider>
+                        </Route>
+                      
+
                     </Switch>
                 </Router>
         )

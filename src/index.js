@@ -7,12 +7,27 @@ import reportWebVitals from './reportWebVitals';
 import "react-datepicker/dist/react-datepicker.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import ReduxPage from './ReduxPage'
+//
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+import rootReducer from './Services/Reducer/RootReducer';
+const store=createStore(rootReducer)
+
 ReactDOM.render(
   <React.StrictMode>
     <Routes />
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+// ReactDOM.render(
+//   <Provider store={store}>
+// <ReduxPage />
+// </Provider>,
+//   document.getElementById('root')
+// );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
