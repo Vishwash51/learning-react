@@ -48,3 +48,29 @@
   color: white;
 }
 
+.item {
+  float: left;
+  display: inline-block;
+  width: 120px;
+  padding: 20px;
+  height: 70px;
+}
+.add-to-cart img{
+  width: 200px;
+    position: absolute;
+    right: 1%;
+    top: 1%;
+}
+.cart-count{
+  position: absolute;
+  right: 28px;
+  top: 43px;
+  z-index: 1;
+  background-color: #242222ad;
+  padding: 0px;
+  width: 53px;
+  height: 53px;
+  border-radius: 60%;
+  color: #fff;
+  font-size: xx-large;
+}

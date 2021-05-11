@@ -1,7 +1,8 @@
-import {ADD_Number} from '../Constants'
+import {ADD_Number,ADD_TO_CART} from '../Constants'
 
 const initialState = {
-    Mathematical: []
+    Mathematical: [],
+    cardData:[]
 }
 
 export default function Sum_(state=[],action) {
@@ -13,7 +14,13 @@ export default function Sum_(state=[],action) {
                 ...state,
                 {Mathematical:action.data}
             ] ;
-
+            break;
+            case ADD_TO_CART:
+            // console.warn("reducer",action)
+            return [
+                ...state,
+                {cardData: action.data}
+            ]
             break;
             default:
                     return state
@@ -21,3 +28,20 @@ export default function Sum_(state=[],action) {
     }
     
 }
+
+// export function AddToCart(state=[],action) {
+//     debugger
+//     switch(action.type){
+//             case ADD_TO_CART:
+//             // console.warn("reducer",action)
+//             return [
+//                 ...state,
+//                 {cardData: action.data}
+//             ]
+//             break;
+//             default:
+//                     return state
+                
+//     }
+    
+// }

@@ -3,6 +3,8 @@ import './App.css';
 import React,{Fragment} from 'react';
 import BlogPageContainers from './Containers/BlogPageContainer'
 import OutputContainers from './Containers/OutputContainers'
+import ProductContainer from './Containers/ProductContainer'
+import ProductDetailContainer from './Containers/ProductDetailContainer'
 
 
 class ReduxPage extends React.Component {
@@ -29,6 +31,17 @@ class ReduxPage extends React.Component {
             <br />
             <BlogPageContainers />
             <OutputContainers />
+
+            <div className="row">
+                <div className="col-sm-9">
+                    {
+                        <ProductContainer />
+  }
+                </div>
+                <div className="col-sm-3">
+                    <ProductDetailContainer />
+                </div>
+            </div>
       </div>
       </Fragment>
     );
